@@ -45,3 +45,41 @@
     * This website shows the scale from the smallest thing in the universe ([Planck Length](https://en.wikipedia.org/wiki/Planck_units)) to the biggest (observable universe)
  * [deeeep.io](https://beta.deeeep.io/)  
     * It's just a fun io game. Its a game where you can level up into different sea creatures with different abilities.
+
+# Mermaid charts
+
+## Flow chart (basic loop)
+``` mermaid
+flowchart TD;
+    A(int i = 0) --> B
+    B(is i < loop count?) --> true
+    B --> false
+    true --> C(Do stuff)
+    C --> B
+    false --> continue
+
+```
+
+## Git branch chart
+``` mermaid
+gitGraph:
+    commit id: "Initial commit"
+    commit id: "normal edit"
+    branch feature-1
+    checkout feature-1
+    commit id: "edit 1"
+    commit id: "edit 2"
+    checkout main
+    commit id: "main edit"
+    branch feature-2
+    checkout feature-2
+    commit id: "edit a"
+    commit id: "edit b"
+    checkout feature-1
+    commit id: "edit 3"
+    checkout main
+    merge feature-1 id: "Merging feature-1"
+    merge feature-2 id: "Merging feature-2"
+    checkout main
+    commit id: "Done"
+```
